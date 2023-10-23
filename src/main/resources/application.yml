@@ -1,0 +1,34 @@
+server.port: 9001
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:6002/test_jooq
+    username: surgerate
+    password: 123456
+    flyway:
+      locations:
+        - classpath:db/migration/schema
+  jpa:
+    generate-ddl: off
+    hibernate.ddl-auto: none
+    hibernate.naming.physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    database-platform: org.hibernate.dialect.PostgreSQL9Dialect
+    show-sql: true
+    properties:
+      hibernate:
+        #        jdbc.batch_size: 20
+        #        order_inserts: true
+        #        order_updates: true
+        format_sql: true
+        show_sql: true
+        type: trace
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+
+  #        enable_lazy_load_no_trans: false
+
+  jooq:
+    datasource:
+      default:
+        sql-dialect: 'POSTGRES'
+
+
