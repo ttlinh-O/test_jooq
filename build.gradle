@@ -29,10 +29,10 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-jooq'
     implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation 'org.springframework.boot:spring-boot-starter-jdbc'
-    runtimeOnly 'org.postgresql:postgresql:42.5.1'
+    runtimeOnly 'org.postgresql:postgresql:42.7.4'
     implementation "org.flywaydb:flyway-core:9.22.2"
     implementation 'org.jooq:jool:0.9.15'
-    jooqGenerator 'org.postgresql:postgresql:42.5.1'
+    jooqGenerator 'org.postgresql:postgresql:42.7.4'
 
     /* lombok */
     implementation "org.projectlombok:lombok:${lombokVersion}"
